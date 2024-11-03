@@ -28,8 +28,14 @@
       <!-- This where the parent tells the child component that it wants it to receive some data.
       we inject the "product" variable from the "ngFor". The product on the left side is
       the "product" variable ProductDetailsComponent
+
+      (buy)=" addToCart(product) - defined CatalogComponent listens for an event emitter name "buy".
+      This is ewvent emitter is defined in Product-Details component by using @Output directive
+
+      When event "buy" is triggered, addToCart(product) is invoked. addToCart() is defined
+      in the parent called "CatalogComponent.ts"
        -->
-      <bot-product-details [product]= "product"> </bot-product-details>
+      <bot-product-details [product]= "product" (buy)="addToCart(product)"> </bot-product-details>
 
       <!-- Move this to bot-product-details-component.html
       <div class="product">

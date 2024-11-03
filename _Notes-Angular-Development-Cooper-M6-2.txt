@@ -144,7 +144,7 @@ Module 6: Communicating Between Angular Components
      - create addToCart()
 
      - let's refactor CatalogComponent.Html
-     
+
      - ng generate component product-details  (navigate frist to the src/app)
 
      - cut and paste lines 27-47 of Component.html and paste it in product-details component
@@ -159,7 +159,10 @@ Module 6: Communicating Between Angular Components
   - communcating with parent component using @Output directive
       - https://app.pluralsight.com/ilx/video-courses/d5d30ea4-0af1-447a-b13a-e60a095337a6/ea84c38f-9b8c-457b-9293-59de17801c39/8958c646-fe1d-4446-8919-5ba9fa751270
 
-      -
+      - shopping cart is part of the parent component (catalog component)
+
+      - send an event to catalog by creating an event emitter called "buy"
+          @Output() buy = new EventEmitter()
 
 Module 7: Creating Angular Services
 

@@ -19,6 +19,8 @@
     <div  *ngIf="product.discount > 0" class="discount">
        ${{(product.price * (1- product.discount)) | currency:'USD'}}
     </div>
-    <button class="cta" (click)="addToCart(product)">Buy</button>
+
+    <!-- send in our data (e.g. product) to the parent CatalogComponent.ts when button is clicked-->
+    <button class="cta" (click)="buyButtonClick(product)">Buy</button>
   </div>
 </div>
